@@ -1,32 +1,22 @@
+/*globals COURSES:true */
 import React from 'react'
-import { Link } from 'react-router'
-import auth from '../utils/auth'
+import Dashboard from './Dashboard'
+import GlobalNav from './GlobalNav'
 import AuthMixin from './AuthMixin'
 
+// class App extends React.Component {
 const App = React.createClass({
   mixins:[AuthMixin],
-
   render() {
     return (
       <div>
-        <ul>
-          <li>
-            {this.state.loggedIn ? (
-              <Link to="/logout">Log out</Link>
-            ) : (
-              <Link to="/login">Sign in</Link>
-            )}
-          </li>
-          <li><Link to="/about">About</Link></li>
-          <li><Link to="/">Home</Link> (changes depending on auth status)</li>
-          <li><Link to="/page2">Page Two</Link> (authenticated)</li>
-          <li><Link to="/user/foo">User: Foo</Link> (authenticated)</li>
-        </ul>
-        {this.props.children}
+        <GlobalNav loggedIn ={this.state.loggedIn}/>
+        <div style={{ padding: 20 }}>
+          {this.props.children || <Dashboard courses={COURSES} />}
+        </div>
       </div>
     )
   }
-
-})
-
-export default App
+}
+)
+module.exports = App
