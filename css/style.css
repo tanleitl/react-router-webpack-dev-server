@@ -1,0 +1,248 @@
+ /*--------------------------------------------------------------------------------------*/
+ /*                     4 - HEADER CSS STYLES                                           */
+ /*-------------------------------------------------------------------------------------*/
+ /*main navigation*/
+#main-navigation.sticky {
+    position: fixed;
+    width: 100%; /*  width: 100%; If you're using fullwidth layout*/
+    height: auto;
+    top: 0px!important;
+    z-index: 9999;
+    border-bottom: 1px solid rgba(0,0,0,0.1cccc);
+}
+#main-navigation.sticky-fullwidth { width: 100%!important }
+#main-navigation {
+    float: left;
+    width: 100%;
+    height: auto;
+    margin-top: 0px;
+}
+#main-navigation select { display: none }
+#main-navigation select {
+    background: #FFF;
+    border: 1px solid #eee;
+    cursor: pointer;
+    padding: 10px 5px;
+    color: #676767;
+}
+ul.main-menu.alternative { float: right }
+ul.main-menu.alternative li a { color: #898989 }
+.main-menu.alternative > li:hover > a { color: #FFF }
+ul.main-menu.alternative li a#current { border: none }
+ul.main-menu.alternative li a {
+    border-right: none;
+    border-left: none;
+}
+.main-menu,
+.main-menu ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+#current {
+    background-color: #ccd0d9;
+    border-right: 1px solid #ccd0d9;
+}
+.main-menu li,
+.main-menu ul a { position: relative }
+.main-menu > li { float: left }
+.main-menu > li.floatr { float: right }
+.main-menu li > a { display: block }
+.main-menu ul {
+    position: absolute;
+    display: none;
+    width: 180px;
+}
+.main-menu ul ul {
+    top: 0;
+    left: 180px;
+}
+.main-menu li:hover > ul { display: block }
+#navigation ul li:first-child { margin-left: -8px }
+#navigation ul li ul li:first-child,
+#navigation ul li ul li ul li:first-child { margin-left: 0 }
+ul.main-menu li a i {
+    color: #FFF;
+    margin-right: 10px;
+}
+ul.main-menu  ul li a i { color: #aab3bc }
+#current {
+    margin-left: 0px;
+    padding-left: 20px;
+    z-index: 8;
+    position: relative;
+}
+.main-menu a { text-decoration: none }
+.main-menu > li > a {
+    color: #fff;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 18px;
+    padding: 15px 20px 16px 20px;
+}
+.main-menu > li > a i {
+    display: block;
+    text-align: center;
+    font-size: 22px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+}
+.main-menu > li:hover > a {
+    background-color: #ccd0d9;
+    padding-left: 20px;
+    margin: 0 0 0 0px;
+}
+ul.main-menu li a {
+    -webkit-transition: background-color 80ms ease-in-out;
+    -moz-transition: background-color 80ms ease-in-out;
+    -o-transition: background-color 80ms ease-in-out;
+    -ms-transition: background-color 80ms ease-in-out;
+    transition: background-color 80ms ease-in-out;
+}
+.main-menu ul li a {
+    -webkit-transition: background-color 20ms ease-in-out, color 20ms ease-in-out;
+    -moz-transition: background-color 20ms ease-in-out, color 20ms ease-in-out;
+    -o-transition: background-color 20ms ease-in-out, color 20ms ease-in-out;
+    -ms-transition: background-color 20ms ease-in-out, color 20ms ease-in-out;
+    transition: background-color 20ms ease-in-out, color 20ms ease-in-out;
+}
+.main-menu  li  a  span {
+    display: block;
+    color: #ccd0d9;
+    width: 100%;
+    font-style: italic;
+    font-size: 11px;
+    line-height: 14px;
+}
+.main-menu > li > a img,
+.main-menu li > ul > li > a img {
+    border: 0;
+    margin-right: 7px;
+}
+/* Sub Menu */
+.main-menu ul {
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-top: none;
+    left: 1px;
+    z-index: 999;
+    -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.04);
+    box-shadow: 0 1px 1px rgba(0,0,0,0.04);
+}
+.main-menu ul a {
+    color: #aab2bd;
+    font-size: 12px;
+    line-height: 18px;
+    padding: 9px 12px;
+    border-top: 1px solid #e6e6e6;
+}
+/* Mega Menu */
+.main-menu .one-column,
+.main-menu .two-columns,
+.main-menu .three-columns,
+.main-menu .four-columns,
+.main-menu .five-columns {
+    position: absolute;
+    display: none;
+    overflow: auto;
+    z-index: 999;
+    background: #fff;
+}
+.main-menu .one-column,
+.main-menu .one { width: 160px }
+.main-menu .two-columns,
+.main-menu .two { width: 320px }
+.main-menu .three-columns,
+.main-menu .three { width: 480px }
+.main-menu .four-columns,
+.main-menu .four { width: 640px }
+.main-menu .five-columns,
+.main-menu .five { width: 800px }
+.main-menu > li.floatr > ul.one-column,
+ul.two-columns,
+ul.three-columns,
+ul.four-columns,
+ul.five-columns { right: 0 }
+.main-menu > li:hover > ul.one-column,
+ul.two-columns,
+ul.three-columns,
+ul.four-columns,
+ul.five-columns { display: block }
+.main-menu .one,
+.main-menu .two,
+.main-menu .three,
+.main-menu .four,
+.main-menu .colfive5 { float: left }
+.main-menu li > ul.one-column,
+ul.two-columns,
+ul.three-columns,
+ul.four-columns,
+ul.five-columns {
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    left: -1px;
+    padding: 10px;
+}
+ul.one-column a:hover,
+ul.two-columns a:hover,
+ul.three-columns a:hover,
+ul.four-columns a:hover,
+ul.five-columns a:hover {
+    background: none;
+    border: none;
+}
+ul.one-column a,
+ul.two-columns a,
+ul.three-columns a,
+ul.four-columns a,
+ul.five-columns a {
+    background: none;
+    border: none;
+}
+ul.one-column p a,
+ul.two-columns p a,
+ul.three-columns p a,
+ul.four-columns p a,
+ul.five-columns p a { padding: 0 }
+.main-menu h5 {
+    font-size: 13px;
+    color: #656d78;
+    font-weight: normal;
+    margin: 8px 10px 7px 10px;
+    font-weight: 600;
+    letter-spacing: 0;
+}
+.main-menu ol {
+    list-style: none;
+    margin: 7px 10px;
+    padding: 0;
+}
+.main-menu ol li {
+    border-bottom: 1px dotted #e0e0e0;
+    padding: 4px 0;
+}
+.main-menu ol a {
+    color: #aab2bd;
+    font-size: 12px;
+    padding: 3px 0;
+    line-height: 15px;
+}
+.main-menu p {
+    font-size: 12px;
+    line-height: 18px;
+    margin: 9px 10px;
+    padding: 0;
+}
+.main-menu p a {
+    color: #aab2bd;
+    text-decoration: underline;
+}
+.main-menu p a:hover { color: #555 }
+.main-menu ol a i {
+    margin-right: 7px;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    -ms-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
