@@ -1,7 +1,9 @@
 import React from 'react'
 import { Link } from 'react-router'
 import auth from '../utils/auth.js'
-
+import { Navbar, Nav, NavItem, NavDropdown, MenuItem} from 'react-bootstrap'
+import { LinkContainer } from 'react-router-bootstrap'
+ 
 const dark = 'hsl(200, 20%, 20%)'
 const light = '#fff'
 const styles = {}
@@ -36,28 +38,41 @@ class GlobalNav extends React.Component {
     alert('log out')
   }
 
+
   render() {
     const { user,loggedIn } = this.props
     // console.log(auth.loggedIn())
     // console.log(this.props.loggedIn)
     return (
-      <div style={styles.wrapper}>
-        <div style={{ float: 'left' }}>
-          <Link to="/" style={styles.link}>首页</Link>{' '}
-          <Link to="/calendar" style={styles.link} activeStyle={styles.activeLink}>室外宏站</Link>{' '}
-          <Link to="/grades" style={styles.link} activeStyle={styles.activeLink}>室内覆盖</Link>{' '}
-          <Link to="/messages" style={styles.link} activeStyle={styles.activeLink}>报表</Link>{' '}
-          <Link to="/user/Lyman" style={styles.link} activeStyle={styles.activeLink}>系统管理</Link>{' '}
-        </div>
-        <div style={{ float: 'right' }}>
-          <Link style={styles.link} to="/profile">{user.name}</Link> 
-            {loggedIn ? (
-              <Link style={styles.link} to="/logout">Log out</Link>
-            ) : (
-              <Link style={styles.link} to="/login">Sign in</Link>
-            )}
-        </div>
-      </div>
+      <Navbar inverse>
+        <Navbar.Header>
+          <Navbar.Brand>
+            <a href="#">React-Bootstrap</a>
+          </Navbar.Brand>
+          <Navbar.Toggle />
+        </Navbar.Header>
+        <Navbar.Collapse>
+          <Nav>
+            <NavItem eventKey={1} href="#">Link</NavItem>
+            <NavItem eventKey={2} href="#">Link</NavItem>
+            <NavDropdown eventKey={3} title="Dropdown" id="basic-nav-dropdown">
+              <MenuItem eventKey={3.1}>Action</MenuItem>
+              <MenuItem eventKey={3.2}>Another action</MenuItem>
+              <MenuItem eventKey={3.3}>Something else here</MenuItem>
+              <MenuItem divider />
+              <MenuItem eventKey={3.3}>Separated link</MenuItem>
+              <MenuItem eventKey={3.3}>Separated link</MenuItem>
+              <LinkContainer to={{ pathname: '/user/Lyman'}}>
+                <MenuItem eventKey={3.3}>系统管理</MenuItem>
+              </LinkContainer>
+            </NavDropdown>
+          </Nav>
+          <Nav pullRight>
+            <NavItem eventKey={1} href="#">Link Right</NavItem>
+            <NavItem eventKey={2} href="#">Link Right</NavItem>
+          </Nav>
+        </Navbar.Collapse>
+      </Navbar>
     )
   }
 }

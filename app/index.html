@@ -3,7 +3,22 @@
   <head>
     <meta charset="utf-8" />
     <title>React router webpack</title>
+	<link href="/global.css" rel="stylesheet"/>
+	<link href="/node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"/>
+
   	<script src="/webpack-dev-server.js"></script>
+	<!--[if lt IE 9]>
+	  <script>
+	    (function(){
+	      var ef = function(){};
+	      window.console = window.console || {log:ef,warn:ef,error:ef,dir:ef};
+	    }());
+	  </script>
+	  <script src="/node_modules/html5shiv/dist/html5shiv.min.js"></script>
+	  <script src="/node_modules/html5shiv/dist/html5shiv-printshiv.min.js"></script>
+	  <script src="/node_modules/es5-shim/es5-shim.min.js"></script>
+	  <script src="/node_modules/es5-shim/es5-sham.min.js"></script>
+	<![endif]-->
   </head>
   <body>
     <div id="example"></div>
