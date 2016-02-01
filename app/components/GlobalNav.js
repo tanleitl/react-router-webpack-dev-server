@@ -3,29 +3,6 @@ import { Link } from 'react-router'
 import auth from '../utils/auth.js'
 import { Navbar, Nav, NavItem, NavDropdown, MenuItem} from 'react-bootstrap'
 import { LinkContainer } from 'react-router-bootstrap'
- 
-const dark = 'hsl(200, 20%, 20%)'
-const light = '#fff'
-const styles = {}
-
-styles.wrapper = {
-  padding: '10px 20px',
-  overflow: 'hidden',
-  background: dark,
-  color: light
-}
-
-styles.link = {
-  padding: 11,
-  color: light,
-  fontWeight: 200
-}
-
-styles.activeLink = {
-  ...styles.link,
-  background: light,
-  color: dark
-}
 
 class GlobalNav extends React.Component {
 
@@ -51,20 +28,20 @@ class GlobalNav extends React.Component {
                 <li className="one">
                   <h5>平台首页</h5>
                   <ol>
-                    <li><a href="#"><i className="icon-group"></i>起始页</a></li>
+                    <li><a href="#"><i className="icon-group">起始页</i></a></li>
                   </ol>
                 </li>
                 <li className="one">
                   <h5>公告信息</h5>
                   <ol>
-                    <li><a href="#"><i className="icon-circle-arrow-left"></i>公告管理</a></li>
+                    <li><a href="#"><i className="icon-circle-arrow-left">公告管理</i></a></li>
                   </ol>
                 </li>
                 <li className="one">
                   <h5>意见反馈</h5>
                   <ol>
-                    <li><a href="#"><i className=" icon-cogs"></i>意见反馈</a></li>
-                    <li><a href="#"><i className="icon-th-large"></i>意见反馈统计</a></li>
+                    <li><a href="#"><i className=" icon-cogs">意见反馈</i></a></li>
+                    <li><a href="#"><i className="icon-th-large">意见反馈统计</i></a></li>
                   </ol>
                 </li>
               </ul>
@@ -74,12 +51,12 @@ class GlobalNav extends React.Component {
                 <li className="one">
                   <h5>我的工作台</h5>
                   <ol>
-                    <li><a href="#"><i className="icon-group"></i>工作台首页</a></li>
-                    <li><a href="#"><i className="icon-group"></i>手机客户端</a></li>
-                    <li><a href="#"><i className="icon-user"></i>我的传阅</a></li>
-                    <li><a href="#"><i className="icon-user"></i>我的工单</a></li>
-                    <li><a href="#"><i className="icon-user"></i>常用意见</a></li>
-                    <li><a href="#"><i className="icon-user"></i>发起工单</a></li>
+                    <li><a href="#"><i className="icon-group">工作台首页</i></a></li>
+                    <li><a href="#"><i className="icon-group">手机客户端</i></a></li>
+                    <li><a href="#"><i className="icon-user">我的传阅</i></a></li>
+                    <li><a href="#"><i className="icon-user">我的工单</i></a></li>
+                    <li><a href="#"><i className="icon-user">常用意见</i></a></li>
+                    <li><a href="#"><i className="icon-user">发起工单</i></a></li>
                   </ol>
                 </li>
               </ul>

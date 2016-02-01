@@ -65,7 +65,7 @@ ul.main-menu li a i {
     color: #FFF;
     margin-right: 10px;
 }
-ul.main-menu  ul li a i { color: #aab3bc }
+ul.main-menu  ul li a i { color: #8396A8 }
 #current {
     margin-left: 0px;
     padding-left: 20px;
@@ -108,9 +108,8 @@ ul.main-menu li a {
 }
 .main-menu  li  a  span {
     display: block;
-    color: #ccd0d9;
+    color: #536278;
     width: 100%;
-    font-style: italic;
     font-size: 11px;
     line-height: 14px;
 }
