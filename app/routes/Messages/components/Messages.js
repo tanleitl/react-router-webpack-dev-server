@@ -1,4 +1,5 @@
 import React from 'react'
+import DropzoneUpload from '../../../utils/DropzoneUpload.js'
 
 class Messages extends React.Component {
 
@@ -6,6 +7,7 @@ class Messages extends React.Component {
     return (
       <div>
         <h2>Messages</h2>
+        <DropzoneUpload />
       </div>
     )
   }
@@ -13,3 +15,4 @@ class Messages extends React.Component {
 }
 
 module.exports = Messages
+

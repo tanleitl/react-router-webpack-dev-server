@@ -1,5 +1,6 @@
 import React from 'react'
 import auth from '../utils/auth.js'
+import {Input, ButtonInput, Glyphicon} from 'react-bootstrap'
 
 const Login = React.createClass({
 
@@ -15,9 +16,8 @@ const Login = React.createClass({
 
   handleSubmit(event) {
     event.preventDefault()
-
-    const email = this.refs.email.value
-    const pass = this.refs.pass.value
+    const email = this.refs.email.getValue()
+    const pass = this.refs.pass.getValue()
 
     auth.login(email, pass, (loggedIn) => {
       if (!loggedIn)
@@ -34,13 +34,13 @@ const Login = React.createClass({
   },
 
   render() {
-    return (
+    return (      
       <form onSubmit={this.handleSubmit}>
-        <label><input ref="email" placeholder="email" defaultValue="joe@example.com" /></label>
-        <label><input ref="pass" placeholder="password" /></label> (hint: password1)<br />
-        <button type="submit">login</button>
+        <Input type="email" ref="email" addonBefore=<Glyphicon glyph="user" /> placeholder="Enter email" defaultValue="joe@example.com" />
+        <Input type="password" ref="pass" addonBefore=<Glyphicon glyph="lock" /> placeholder="password" />(提示: password1)
+        <ButtonInput type="submit" value="登录" />
         {this.state.error && (
-          <p>Bad login information</p>
+          <p>登录失败</p>
         )}
       </form>
     )

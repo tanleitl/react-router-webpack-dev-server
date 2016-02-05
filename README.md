@@ -18,3 +18,15 @@ To run the examples in your development environment:
 3. Start the development server with `npm start`
 4. Point your browser to http://localhost:8080
 
+How to test with [Jest](http://facebook.github.io/jest) 
+install:
+npm install jest-cli react-addons-test-utils --save-dev 
+
+
+1. Create a __tests__/ directory where the each js file is
+2. Create a file called jsfilename-test.js in __tests__/ directory and we write our test in it
+3. 
+
+npm test -- --watch 
+Or
+npm test -- --watch=skip

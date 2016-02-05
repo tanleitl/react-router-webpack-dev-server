@@ -23,6 +23,12 @@ module.exports = {
     ]
   },
   devServer: {
-    historyApiFallback: true
+    historyApiFallback: true,
+    proxy: {
+    '/uploadHandler*': {
+      target: 'http://localhost:8000',
+      secure: false,
+    },
   }
+}
 };
