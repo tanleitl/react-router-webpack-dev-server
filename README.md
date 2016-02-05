@@ -4,13 +4,6 @@ This is an example app using [react-router](https://github.com/rackt/react-route
 and [webpack](https://webpack.github.io/), along with the handy
 [webpack-dev-server](https://webpack.github.io/docs/webpack-dev-server.html).
 
-The dev server is configured with `historyApiFallback: true` in `webpack.config.js`,
-which allows use of `createBrowserHistory` in react-router for better looking URLs
-(using the HTML5 pushState/history API).
-
-webpack-dev-server will serve `index.html` instead of any 404 request, which allows
-react-router to pick up the URL and build the correct application state.
-
 To run the examples in your development environment:
 
 1. Clone this repo
@@ -22,7 +15,6 @@ How to test with [Jest](http://facebook.github.io/jest)
 install:
 npm install jest-cli react-addons-test-utils --save-dev 
 
-
 1. Create a __tests__/ directory where the each js file is
 2. Create a file called jsfilename-test.js in __tests__/ directory and we write our test in it
 3. 
@@ -30,3 +22,5 @@ npm install jest-cli react-addons-test-utils --save-dev
 npm test -- --watch 
 Or
 npm test -- --watch=skip
+
+开发中。。。
